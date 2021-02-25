@@ -104,10 +104,13 @@ end
 
 def show_cart
   puts "    ****************************** Showing Cart ******************************    "
+    if @cart.length == 0
+      puts "    -------------- Your cart is empty! --------------"
+    else
     @cart.each do |item, index|
       puts " #{item[:key]}. #{item[:name]} -- $ #{item[:cost]}"
     end
-    
+  end
 end
 
 def call_pop
